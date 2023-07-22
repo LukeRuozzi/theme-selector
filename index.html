@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main>
+      <h1>Home page</h1>
+      <h3>Settings</h3>
+      <fieldset class="settings">
+        <legend>Theme</legend>
+        <div class="radio-wrapper">
+          <input type="radio" id="light" name="theme" />
+          <label for="light">Light</label>
+        </div>
+
+        <div class="radio-wrapper">
+          <input type="radio" id="dark" name="theme" />
+          <label for="dark">Dark</label>
+        </div>
+
+        <div class="radio-wrapper">
+          <input type="radio" id="lal" name="theme" />
+          <label for="lal">LAL</label>
+        </div>
+      </fieldset>
+      <fieldset class="settings">
+        <legend>Border</legend>
+        <div class="radio-wrapper">
+          <input type="radio" id="square" name="border" />
+          <label for="square">Square</label>
+        </div>
+
+        <div class="radio-wrapper">
+          <input type="radio" id="round" name="border" />
+          <label for="round">Round</label>
+        </div>
+      </fieldset>
+    </main>
+  </body>
+</html>

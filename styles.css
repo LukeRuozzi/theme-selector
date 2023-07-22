@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-square: 0px;
+  --border-round: 10px;
+
+  /* light */
+  --color-light: #000;
+  --bkg-light: #fff;
+  --navColor-light: #000;
+  --navBkg-light: rgb(245, 240, 240);
+  --navButtonBkg-light: rgb(172, 165, 165);
+  --navButtonColor-light: rgb(0, 0, 0);
+
+  /* dark */
+  --color-dark: rgb(185, 180, 180);
+  --bkg-dark: rgb(34, 33, 33);
+  --navColor-dark: #000;
+  --navBkg-dark: rgb(126, 122, 122);
+  --navButtonBkg-dark: rgb(73, 72, 72);
+  --navButtonColor-dark: #fff;
+
+  /* LAL */
+  --bkg-lal: rgb(84, 37, 131);
+  --color-lal: rgb(253, 184, 39);
+  --navColor-lal: #000;
+  --navBkg-lal: rgb(63, 26, 100);
+  --navButtonBkg-lal: rgb(253, 184, 39);
+  --navButtonColor-lal: rgb(36, 13, 59);
+}
+
+[data-theme='light'] {
+  --color: var(--color-light);
+  --bkg: var(--bkg-light);
+  --navColor: var(--navColor-light);
+  --navBkg: var(--navBkg-light);
+  --navButtonBkg: var(--navButtonBkg-light);
+  --navButtonColor: var(--navButtonColor-light);
+}
+
+[data-theme='dark'] {
+  --color: var(--color-dark);
+  --bkg: var(--bkg-dark);
+  --navColor: var(--navColor-dark);
+  --navBkg: var(--navBkg-dark);
+  --navButtonBkg: var(--navButtonBkg-dark);
+  --navButtonColor: var(--navButtonColor-dark);
+}
+
+[data-theme='lal'] {
+  --color: var(--color-lal);
+  --bkg: var(--bkg-lal);
+  --navColor: var(--navColor-lal);
+  --navBkg: var(--navBkg-lal);
+  --navButtonBkg: var(--navButtonBkg-lal);
+  --navButtonColor: var(--navButtonColor-lal);
+}
+
+[data-border='square'] {
+  --border: var(--border-square);
+}
+
+[data-border='round'] {
+  --border: var(--border-round);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--color);
+  background-color: var(--bkg);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: solid 1px #aaa;
+  background-color: var(--navBkg);
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: var(--border);
+  border: solid 1px #aaa;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+nav a[aria-current='page'] {
+  color: var(--navButtonColor);
+  background-color: var(--navButtonBkg);
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.settings {
+  display: flex;
+  gap: 15px;
+  max-width: 250px;
+  border-radius: var(--border);
+}
+
+.radio-wrapper {
+  cursor: pointer;
+}
+
+.radio-wrapper input,
+label {
+  cursor: pointer;
+}
