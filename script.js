@@ -15,6 +15,34 @@ const defaultUiSettings = [
   },
 ];
 
+const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
+
+const cardContainer = document.querySelector('.card-container');
+
+fetch('https://randomuser.me/api/?results=3')
+  .then((res) => res.json())
+  .then((data) => {
+    data.results.forEach((elm) => {
+      const desc = `${elm.name.first} ${elm.name.last}`;
+      const dob = new Date(Date.parse(elm.dob.date)).toLocaleDateString(
+        'it',
+        dateOptions
+      );
+      const pictureUrl = elm.picture.medium;
+
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `<div class="card-img-wrapper">
+          <img src="${pictureUrl}" alt="" />
+        </div>
+        <h3>${desc}</h3>
+        <p>${dob}</p>
+      </div>`;
+
+      cardContainer.appendChild(div);
+    });
+  });
+
 window.addEventListener('DOMContentLoaded', () => {
   defaultUiSettings.forEach((setting) => {
     const value = localStorage.getItem(setting.key) ?? setting.value;
