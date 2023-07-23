@@ -17,41 +17,77 @@
     </nav>
     <main>
       <h1>Home page</h1>
-      <h3>Settings</h3>
-      <fieldset class="settings">
-        <legend>Theme</legend>
-        <div class="radio-wrapper">
-          <input type="radio" id="light" name="theme" />
-          <div class="radio-check"></div>
-          <label for="light">Light</label>
-        </div>
-
-        <div class="radio-wrapper">
-          <input type="radio" id="dark" name="theme" />
-          <div class="radio-check"></div>
-          <label for="dark">Dark</label>
-        </div>
-
-        <div class="radio-wrapper">
-          <input type="radio" id="lal" name="theme" />
-          <div class="radio-check"></div>
-          <label for="lal">LAL</label>
-        </div>
-      </fieldset>
-      <fieldset class="settings">
-        <legend>Border</legend>
-        <div class="radio-wrapper">
-          <input type="radio" id="square" name="border" />
-          <div class="radio-check"></div>
-          <label for="square">Square</label>
-        </div>
-
-        <div class="radio-wrapper">
-          <input type="radio" id="round" name="border" />
-          <div class="radio-check"></div>
-          <label for="round">Round</label>
-        </div>
-      </fieldset>
     </main>
+
+    <div class="settings-wrapper">
+      <h3>Settings</h3>
+
+      <div class="settings-container">
+        <fieldset class="settings">
+          <legend>Theme</legend>
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="light" name="theme" />
+              <div class="radio-check"></div>
+              Light
+            </label>
+          </div>
+
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="dark" name="theme" />
+              <div class="radio-check"></div>
+              Dark
+            </label>
+          </div>
+
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="lal" name="theme" />
+              <div class="radio-check"></div>
+              LAL
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="settings">
+          <legend>Border</legend>
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="square" name="border" />
+              <div class="radio-check"></div>
+              Square
+            </label>
+          </div>
+
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="round" name="border" />
+              <div class="radio-check"></div>
+              Round
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="settings">
+          <legend>Color</legend>
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="color1" name="color" />
+              <div class="radio-check"></div>
+              Color 1
+            </label>
+          </div>
+
+          <div class="radio-wrapper">
+            <label>
+              <input type="radio" id="color2" name="color" />
+              <div class="radio-check"></div>
+              Color 2
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
   </body>
 </html>

@@ -9,6 +9,10 @@ const defaultUiSettings = [
     key: 'border',
     value: 'square',
   },
+  {
+    key: 'color',
+    value: 'color1',
+  },
 ];
 
 window.addEventListener('DOMContentLoaded', () => {
