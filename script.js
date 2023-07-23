@@ -23,19 +23,23 @@ fetch('https://randomuser.me/api/?results=3')
   .then((res) => res.json())
   .then((data) => {
     data.results.forEach((elm) => {
+      console.log(elm);
       const desc = `${elm.name.first} ${elm.name.last}`;
       const dob = new Date(Date.parse(elm.dob.date)).toLocaleDateString(
         'it',
         dateOptions
       );
-      const pictureUrl = elm.picture.medium;
+      const pictureUrl = elm.picture.large;
+      const address = `${elm.location.city}<br>${elm.location.state}`;
 
       const div = document.createElement('div');
       div.className = 'card';
       div.innerHTML = `<div class="card-img-wrapper">
-          <img src="${pictureUrl}" alt="" />
+          <div style="background-image: url('${pictureUrl}');"></div>
         </div>
         <h3>${desc}</h3>
+        <p>${address}</p>
+        <p>${elm.location.country.toUpperCase()}</p>
         <p>${dob}</p>
       </div>`;
 
